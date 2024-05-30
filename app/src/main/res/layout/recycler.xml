@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+
+    android:orientation="vertical">
+
+<!--    @+id/book_id_txt"-->
+<!--    @+id/bookTitle"-->
+<!--    @+id/bookAuthor"-->
+<!--    "@+id/page"-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:elevation="2dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:cardMaxElevation="2dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/book_id_txt"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/black"
+                android:text="1"
+                android:textSize="34sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bookTitle"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:text="Title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/book_id_txt"
+                app:layout_constraintTop_toTopOf="@+id/book_id_txt" />
+
+            <TextView
+                android:id="@+id/bookAuthor"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/black"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:maxLines="1"
+                android:text="Author"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/bookTitle"
+                app:layout_constraintTop_toBottomOf="@+id/bookTitle" />
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="24dp"
+                android:drawableLeft="@drawable/baseline_local_library_24"
+                android:maxLines="1"
+                android:text="category"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="@+id/bookAuthor"
+
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/bookAuthor"
+                app:layout_constraintTop_toBottomOf="@id/bookAuthor" />
+
+            <TextView
+                android:id="@+id/page"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Page"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/bookTitle"
+                app:layout_constraintTop_toTopOf="@+id/bookTitle"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
